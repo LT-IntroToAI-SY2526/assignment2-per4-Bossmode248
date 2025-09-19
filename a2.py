@@ -17,17 +17,14 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
     sind = 0  # current index we are looking at in source list
     pind = 0  # current index we are looking at in pattern list
     result: List[str] = []  # to store substitutions we will return if matched
-
+    x = 0
     # keep checking as long as we haven't hit the end of either pattern or source while
     # pind is still a valid index OR sind is still a valid index (valid index means that
     # the index is != to the length of the list)
-    while "FILL IN CONDITION HERE":
-        # your job is to fill out the body of this loop
-
-        # you should delete the following line
-        return ["Not done yet :)"]
+    while pind > len(pattern) or sind < len(pattern):
 
         # 1) if we reached the end of the pattern but not source
+         
 
         # 2) if the current thing in the pattern is a %
         # WARNING: this condition contains the bulk of the code for the assignment
@@ -35,16 +32,26 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         #   and come back to this one afterwards
 
         # 3) if we reached the end of the source but not the pattern
-
+        if sind > len(source) and pind <= len(pattern):
+            return None
         # 4) if the current thing in the pattern is an _
 
         # 5) if the current thing in the pattern is the same as the current thing in the
         # source
+        if pattern[pind] == source[sind]:
+            print(pattern[pind], source[sind])
+            pind += 1
+            sind +=1
+        else:
+            print("no match")
+            return None
+
+
 
         # 6) else : this will happen if none of the other conditions are met it
         # indicates the current thing it pattern doesn't match the current thing in
         # source
-
+    print("Successful match!")
     return result
 
 
