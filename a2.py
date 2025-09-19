@@ -24,7 +24,10 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
     while pind > len(pattern) or sind < len(pattern):
 
         # 1) if we reached the end of the pattern but not source
-         
+        if pind == len(pattern):
+         return None
+         print("Reached end of pattern")
+             
 
         # 2) if the current thing in the pattern is a %
         # WARNING: this condition contains the bulk of the code for the assignment
@@ -32,8 +35,7 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         #   and come back to this one afterwards
 
         # 3) if we reached the end of the source but not the pattern
-        if sind > len(source) and pind <= len(pattern):
-            return None
+        
         # 4) if the current thing in the pattern is an _
 
         # 5) if the current thing in the pattern is the same as the current thing in the
