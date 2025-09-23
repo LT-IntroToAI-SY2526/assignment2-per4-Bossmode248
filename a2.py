@@ -30,9 +30,17 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
              
 
         # 2) if the current thing in the pattern is a %
-        elif pattern == "%":
-            
-            print(pattern[pind], source(sind))
+        elif pattern[pind] == "%":
+            if pind == len(pattern) - 1:
+                combined = " ".join(source[sind:])
+                result.append(combined)
+                print(result)
+                return result
+            elif pattern[pind + 1] != "%":
+                lol = "".join(source[sind])
+                print(lol)
+                return lol
+                
         # WARNING: this condition contains the bulk of the code for the assignment
         # If you get stuck on this one, we encourage you to attempt the other conditions
         #   and come back to this one afterwards
