@@ -12,9 +12,9 @@ This assignment is about learning and applying the while loop and iterating thro
 
 ## Reflection Questions
 1. What was difficult for you while completing the match function?
-
+What i found somewhat difficult was keeping up and trying to figure ut my own ways of completing the questions. This could be because I have barely tried to use AI, since I have conditioned myself to try and not use it, and it can also because of my lack of experience with coding over all that I don't have much ideas to complete the problems in a way that isn't like java. Im taking AP computer science, so im bound to favor java more in my head space when thinking of coding since I have more years of experience with it. 
 
 
 2. Explain how you could use the match function for extracting information from a movie database.
-
+You could use the match function to find if a movie you are thinking of exists, or when it was made, the actors in it, and other things. If you want to watch some old movies to see if they still hold up to modern standards, you can use the match function to find all the old movies you can. Or if your picky, you can just be very specific and it will filter things for you.
 
