@@ -36,11 +36,15 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
                 result.append(combined)
                 print(result)
                 return result
-            elif pattern[pind + 1] != "%":
-                lol = "".join(source[sind])
-                print(lol)
-                return lol
-                
+            else:
+                pind += 1
+                slocation = sind
+                while pattern[pind] != source[sind]:
+                    sind += 1
+                    if sind == len(source):
+                        return None
+                result.append(" ".join(source[slocation:sind]))
+
         # WARNING: this condition contains the bulk of the code for the assignment
         # If you get stuck on this one, we encourage you to attempt the other conditions
         #   and come back to this one afterwards
